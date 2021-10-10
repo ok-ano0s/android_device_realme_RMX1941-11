@@ -55,6 +55,9 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
 
+# Properties
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
