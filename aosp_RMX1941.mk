@@ -54,3 +54,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-realme
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
+
+# FaceLock
+TARGET_FACE_UNLOCK_SUPPORTED := true
