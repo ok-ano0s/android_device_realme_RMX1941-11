@@ -2,4 +2,4 @@
 recovery_only(`
     permissive init;
     permissive recovery;
-') 
+')
