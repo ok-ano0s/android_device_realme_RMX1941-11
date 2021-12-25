@@ -45,7 +45,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.target.rc \
     fstab.mt6765 \
-    perf_profile.sh 
+    perf_profile.sh \
+    swap_enable.sh 
 
 # HIDL
 PRODUCT_PACKAGES += \
