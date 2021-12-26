@@ -51,6 +51,13 @@ on boot
     chmod 0660 /sys/class/power_supply/usb/otg_switch
     write /sys/class/power_supply/usb/otg_switch 1
 
+service ktweak /vendor/bin/sh /system/etc/init/ktweak.sh
+    class late_start
+    disabled
+    user root
+    group system
+    oneshot
+
 # Import Swap Enable Script from realmeUI
 service swap_enable /system/bin/sh /system/etc/swap_enable.sh
     class late_start
@@ -151,3 +158,4 @@ on property:sys.boot_completed=1
     chmod 440 /proc/net/unix
     chmod +x /system/etc/swap_enable.sh
     start swap_enable
+    start ktweak
