@@ -146,6 +146,11 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    hostapd \
+    libwpa_client \
+    libwifi-hal \
+    wpa_supplicant \
+    wpa_supplicant.conf \
     WifiOverlay
 
 # Privapp-permissions whitelist
