@@ -16,6 +16,7 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 #
@@ -24,8 +25,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
-# Inherit some common Aosp stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Styx stuff
+$(call inherit-product, vendor/styx/config/common.mk)
+TARGET_DISABLE_BLUR := true
 
 # Inherit from RMX1941 device makefile
 $(call inherit-product, device/realme/RMX1941/device.mk)
@@ -36,7 +38,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX1941
-PRODUCT_NAME := aosp_RMX1941
+PRODUCT_NAME := styx_RMX1941
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C2
 PRODUCT_MANUFACTURER := realme
